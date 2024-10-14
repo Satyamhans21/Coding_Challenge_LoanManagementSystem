@@ -4,7 +4,7 @@ public class Evidence {
     private String evidenceID;
     private String description;
     private String locationFound;
-    private String incidentID; // Foreign key as String
+    private String incidentID; 
 
     // Default Constructor
     public Evidence() {}

@@ -28,6 +28,7 @@ public class CrimeAnalysisDaoImpl implements ICrimeAnalysisDao{
 	            stmt.setString(4, incident.getLocation());
 	            stmt.setString(5, incident.getDescription());
 	            stmt.setString(6, incident.getStatus());
+	            
 	            return stmt.executeUpdate() > 0;
 	        } catch (Exception e) {
 	            e.printStackTrace();
@@ -97,31 +98,44 @@ public class CrimeAnalysisDaoImpl implements ICrimeAnalysisDao{
 
 	    @Override
 	    public Report generateIncidentReport(Incident incident) {
-	        // Implement report generation logic here
-	        return new Report(); // Placeholder return
+	        // Create a new Report object
+	        Report report = new Report();
+
+	       
+	        report.setIncidentID(incident.getIncidentID()); 
+	        report.setReportDetails(incident.getDescription());  
+	        report.setReportDate(incident.getIncidentDate());  
+	        report.setStatus(incident.getStatus()); 
+
+
+
+	        return report;
 	    }
 
-	    @Override
-	    public void createCase(String caseDescription, Collection<Incident> incidents) {
-	        // Implement case creation logic here
-	    }
+		@Override
+		public void createCase(String caseDescription, Collection<Incident> incidents) {
+			// TODO Auto-generated method stub
+			
+		}
 
-	    @Override
-	    public void getCaseDetails(int caseId) {
-	        // Implement case detail retrieval logic here
-	    }
+		@Override
+		public void getCaseDetails(int caseId) {
+			// TODO Auto-generated method stub
+			
+		}
 
-	    @Override
-	    public boolean updateCaseDetails() {
-	        // Implement case update logic here
-	        return false; // Placeholder return
-	    }
+		@Override
+		public boolean updateCaseDetails() {
+			// TODO Auto-generated method stub
+			return false;
+		}
 
-	    @Override
-	    public Collection<?> getAllCases() {
-	        // Implement all cases retrieval logic here
-	        return new ArrayList<>(); // Placeholder return
-	    }
+		@Override
+		public Collection<?> getAllCases() {
+			// TODO Auto-generated method stub
+			return null;
+		}
+
 	}
 
 

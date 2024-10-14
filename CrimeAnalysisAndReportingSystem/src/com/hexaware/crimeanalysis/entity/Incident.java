@@ -70,6 +70,12 @@ public class Incident {
 	public void setSuspectID(int suspectID) {
 		this.suspectID = suspectID;
 	}
+	@Override
+	public String toString() {
+		return "Incident [incidentID=" + incidentID + ", incidentType=" + incidentType + ", incidentDate="
+				+ incidentDate + ", location=" + location + ", description=" + description + ", status=" + status
+				+ ", victimID=" + victimID + ", suspectID=" + suspectID + "]";
+	}
 	
 	
     

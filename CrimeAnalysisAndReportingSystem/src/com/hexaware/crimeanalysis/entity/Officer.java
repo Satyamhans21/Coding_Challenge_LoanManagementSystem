@@ -7,7 +7,7 @@ public class Officer {
     private String badgeNumber;
     private String rank;
     private String contactInformation;
-    private String agencyID; // Foreign key as String
+    private String agencyID; 
 
     // Default Constructor
     public Officer() {}

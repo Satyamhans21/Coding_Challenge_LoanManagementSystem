@@ -1,15 +1,17 @@
 package com.hexaware.crimeanalysis.entity;
 
 public class Report {
-	   private String reportID;
-	    private String incidentID;
+	   private int reportID;
+	    private int incidentID;
 	    private String reportingOfficer;
 	    private String reportDate; 
 	    private String reportDetails;
 	    private String status;
+	    private int victimID;
+	    private int suspectID;
 	    public Report() {}
-		public Report(String reportID, String incidentID, String reportingOfficer, String reportDate,
-				String reportDetails, String status) {
+		public Report(int reportID, int incidentID, String reportingOfficer, String reportDate,
+				String reportDetails, String status,int victimID,int suspectID) {
 			super();
 			this.reportID = reportID;
 			this.incidentID = incidentID;
@@ -17,17 +19,19 @@ public class Report {
 			this.reportDate = reportDate;
 			this.reportDetails = reportDetails;
 			this.status = status;
+			this.victimID = victimID;
+			this.suspectID = suspectID;
 		}
-		public String getReportID() {
+		public int getReportID() {
 			return reportID;
 		}
-		public void setReportID(String reportID) {
+		public void setReportID(int reportID) {
 			this.reportID = reportID;
 		}
-		public String getIncidentID() {
+		public int getIncidentID() {
 			return incidentID;
 		}
-		public void setIncidentID(String incidentID) {
+		public void setIncidentID(int incidentID) {
 			this.incidentID = incidentID;
 		}
 		public String getReportingOfficer() {
@@ -53,6 +57,18 @@ public class Report {
 		}
 		public void setStatus(String status) {
 			this.status = status;
+		}
+		public int getVictimID() {
+			return victimID;
+		}
+		public void setVictimID(int victimID) {
+			this.victimID = victimID;
+		}
+		public int getSuspectID() {
+			return suspectID;
+		}
+		public void setSuspectID(int suspectID) {
+			this.suspectID = suspectID;
 		}
 	    
 
